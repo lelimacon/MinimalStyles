@@ -178,7 +178,11 @@
   .install-info
   {
     background-image: none;
-    cursor: default;
+  }
+  .install:hover,
+  .install-info:hover
+  {
+    background-image: none;
   }
   .install-status
   {
