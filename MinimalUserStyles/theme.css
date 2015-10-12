@@ -1,0 +1,115 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("userstyles.org")
+{
+  /*
+   * Top banner
+   */
+  body
+  {
+    margin: 0px;
+    background-color: #F6F6F6;
+    max-width: none !important;
+  }
+  #main-header
+  {
+    background-color: #16e;
+    padding: 10px 10px 10px 13px;
+    color: #FFF;
+    box-shadow: 0px 2px 2px #aaa;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  /*
+   * Left menu
+   */
+  #left-sidebar
+  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #DDD;
+    background-color: #FFF;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Stylish_SVG_Logo.svg/256px-Stylish_SVG_Logo.svg.png");
+    background-repeat : no-repeat;
+    background-position: center 6px;
+    background-size: 40px 40px;
+  }
+  #left-sidebar nav
+  {
+    margin: 0;
+    margin-top: 53px;
+    height: 80%;
+    padding: 15px;
+    border-top: 1px solid #DDD;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  #sidebar-search #search-terms
+  {
+    width: 100%;
+    height: 26px;
+    float: none;
+  }
+  #sidebar-search #search-submit
+  {
+    position: absolute;
+    right: 15px;
+    float: none;
+    margin: 0;
+    margin-top: 0;
+    width: 30px;
+    height: 26px;
+    border: none;
+    background: none;
+    background-color: transparent;
+  }
+  #sidebar-search #search-submit:hover
+  {
+    background-color: #4af;
+  }
+  #sidebar-search #show-advanced-search
+  {
+    text-decoration: none !important;
+    color: #222;
+  }
+  #left-sidebar li
+  {
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  #left-sidebar li a
+  {
+    color: #444;
+    text-decoration: none;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+  #sidebar-search
+  {
+    margin-bottom: 26px !important;
+  }
+  
+  /*
+   * Content
+   */
+  #content-wrapper
+  {
+    float: none;
+    margin-left: 200px;
+    width: initial;
+  }
+  #main-article
+  {
+    margin-left: 0;
+    margin: auto;
+    padding: 20px;
+    max-width: 1100px;
+  }
+}
