@@ -14,11 +14,38 @@
   #main-header
   {
     background-color: #16e;
-    padding: 10px 10px 10px 13px;
+    padding: 10px 10px 10px 190px;
     color: #FFF;
     box-shadow: 0px 2px 2px #aaa;
     margin: 0;
     border-radius: 0;
+  }
+  #main-header h1 a
+  {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 10px 15px 10px 15px;
+    border-right: 1px solid #DDD;
+    text-decoration: none;
+    background-color: #fff;
+    /* LOGO
+    color: transparent;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Stylish_SVG_Logo.svg/256px-Stylish_SVG_Logo.svg.png");
+    background-repeat : no-repeat;
+    background-position: center 6px;
+    background-size: 40px 40px;
+    */
+    /* TEXT
+    */
+    color: #444;
+  }
+  #main-header h1 a:hover
+  {
+    /* LOGO
+    color: transparent;
+    */
+    color: initial;
   }
 
   /*
@@ -26,8 +53,8 @@
    */
   #left-sidebar
   {
-    position: absolute;
-    top: 0px;
+    position: fixed;
+    top: 53px;
     left: 0px;
     padding: 0px;
     width: 200px;
@@ -36,15 +63,10 @@
     background-color: #FFF;
     margin: 0;
     padding: 0;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Stylish_SVG_Logo.svg/256px-Stylish_SVG_Logo.svg.png");
-    background-repeat : no-repeat;
-    background-position: center 6px;
-    background-size: 40px 40px;
   }
   #left-sidebar nav
   {
     margin: 0;
-    margin-top: 53px;
     height: 80%;
     padding: 15px;
     border-top: 1px solid #DDD;
@@ -77,6 +99,7 @@
   #sidebar-search #show-advanced-search
   {
     text-decoration: none !important;
+    margin-top: 2px;
     color: #222;
   }
   #left-sidebar li
@@ -94,6 +117,45 @@
   #sidebar-search
   {
     margin-bottom: 26px !important;
+  }
+  #related
+  {
+    background-color: #D1EEEE;
+    border-radius: 0;
+    position: absolute;
+    bottom: 46px;
+    font-size: 0.8em;
+    background-color: transparent;
+  }
+  #related h2
+  {
+    margin-bottom: 16px;
+  }
+  #related li
+  {
+    margin-bottom: 4px;
+  }
+  #related .more
+  {
+    margin-top: 12px;
+    border: none;
+  }
+    @media (max-width: 900px)
+    {
+    #left-sidebar
+    {
+      float: none !important;
+      width: 200px !important;
+      margin: 0 !important;
+    }
+    #sidebar-search #search-terms
+    {
+      width: 100% !important;
+    }
+    #sidebar-search #show-advanced-search
+    {
+      text-align: right !important;
+    }
   }
   
   /*
