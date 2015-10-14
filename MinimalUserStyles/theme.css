@@ -8,12 +8,12 @@
   body
   {
     margin: 0px;
-    background-color: #FdFdFd;
+    background-color: #fdfdfd;
     max-width: none !important;
   }
   #main-header
   {
-    background-color: ghostwhite;
+    background-color: #f4f4f4;
     padding: 16px 10px 16px 250px;
     color: #444;
     font-weight: none;
