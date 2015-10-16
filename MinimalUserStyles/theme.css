@@ -14,12 +14,22 @@
   #main-header
   {
     background-color: #f4f4f4;
-    padding: 16px 10px 16px 250px;
+    padding: 16px 10px 16px 230px;
     color: #444;
     font-weight: none;
     box-shadow: 0px 2px 2px #aaa;
     margin: 0;
     border-radius: 0;
+  }
+  #main-header h1::after /* hides the dash */
+  {
+    position: absolute;
+    top: 23px;
+    left: 222px;
+    width: 20px;
+    height: 20px;
+    background-color: #f4f4f4;
+    content: "";
   }
   #main-header h1 a
   {
@@ -39,14 +49,14 @@
     */
     /* TEXT
     */
-    color: #444;
+    color: #666;
   }
   #main-header h1 a:hover
   {
     /* LOGO
     color: transparent;
     */
-    color: initial;
+    color: #222;
   }
 
   /*
@@ -73,6 +83,11 @@
     border-top: 1px solid #DDD;
     border-radius: 0;
     background-color: transparent;
+  }
+  #sidebar-search
+  {
+    margin-top: 16px;
+    margin-bottom: 36px !important;
   }
   #sidebar-search #search-terms
   {
@@ -110,7 +125,7 @@
     margin-top: 2px;
     color: #222;
   }
-  #left-sidebar li
+  #left-sidebar nav li
   {
     font-weight: bold;
     margin-bottom: 24px;
@@ -121,11 +136,6 @@
     text-decoration: none;
     padding-bottom: 6px;
     padding-top: 6px;
-  }
-  #sidebar-search
-  {
-    margin-top: 16px !important;
-    margin-bottom: 36px !important;
   }
   #related
   {
@@ -157,7 +167,7 @@
     #left-sidebar
     {
       float: none !important;
-      width: 200px !important;
+      width: 220px !important;
       margin: 0 !important;
     }
     #sidebar-search #search-terms
@@ -167,6 +177,24 @@
     #sidebar-search #show-advanced-search
     {
       text-align: right !important;
+    }
+  }
+  @media (max-height: 560px)
+  {
+    #sidebar-search
+    {
+      margin-bottom: 18px !important;
+    }
+    #left-sidebar nav li
+    {
+      margin-bottom: 14px;
+    }
+  }
+  @media (max-height: 480px)
+  {
+    #related
+    {
+      display: none;
     }
   }
 
@@ -179,9 +207,11 @@
     top: 90px;
     right: 20px;
     width: 240px;
-    height: 220px;
-    border-radius: 2px;
-    box-shadow: 0px 2px 2px #aaa;
+    height: 349px;
+    border-radius: 0px;
+    border-top-right-radius:2px;
+    border-top-left-radius:2px;
+    box-shadow: 0px 2px 3px #aaa;
     background-color: #fff;
   }
   #left-info #screenshots
@@ -190,30 +220,28 @@
     border: none;
     padding: 10px;
   }
-  .screenshot-thumbnail
+  #main-screenshot
   {
     overflow-y: unset;
   }
-  .screenshot-thumbnail img
+  #main-screenshot img
   {
     max-width: 220px;
+    max-height: 138px;
   }
   #more-screenshots
   {
-    margin-top: 8px;
-    margin-bottom: 4px;
-    border: none;
+    display: none;
   }
   #info-tables
   {
     position: absolute;
-    top: 238px;
+    top: 240px;
     right: 20px;
     width: 240px;
     padding-bottom: 30px;
     border-radius: 0px;
-    box-shadow: 0px 2px 2px #aaa;
-    background-color: #fff;
+    background-color: transparent;
   }
   #info-tables #style-author-info
   {
@@ -244,7 +272,8 @@
     width: 100%;
     white-space: nowrap;
   }
-  #info-tables #style-install-info td + td /* all but last, [show/hide css] */
+  /*#info-tables #style-install-info td + td /* all but last, [show/hide css] */
+  #info-tables td
   {
     text-align: right;
   }
@@ -258,18 +287,37 @@
   {
     background-image: none;
   }
+  #info-tables #show-button
+  {
+    position: absolute;
+    top: 173px;
+    right: 0;
+    width: 220px;
+    height: 26px;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-align: left;
+    background-color: #e4e4e4;
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  #info-tables #show-button:hover
+  {
+    background-color: #f2f2f2;
+  }
   .install-status
   {
     position: absolute;
-    z-index: 10;
-    top: 410px;
+    z-index: 8;
+    top: 434px;
     right: 20px;
     width: 208px;
     max-width: 240px;
     border-radius: 0px;
     border-bottom-right-radius:2px;
     border-bottom-left-radius:2px;
-    box-shadow: 0px 2px 2px #aaa;
+    box-shadow: 0px 2px 3px #aaa;
     font-size: 0.9em;
   }
 
@@ -296,7 +344,7 @@
     margin-right: 240px;
     padding: 0;
     padding-right: 20px;
-    min-height: 396px;
+    min-height: 416px;
   }
   #additional-info
   {
