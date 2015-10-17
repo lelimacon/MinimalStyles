@@ -380,13 +380,14 @@
   #content-wrapper
   {
     float: none;
+    margin-top: 60px;
     margin-left: 220px;
     width: initial;
   }
   #main-article
   {
     margin-left: 0;
-    margin: auto;
+    margin: 0 !important;
     padding: 20px;
     padding-top: 24px;
     max-width: none;
@@ -394,10 +395,8 @@
   #main-style-info
   {
     margin: 0;
-    margin-right: 240px;
     padding: 0;
     padding-right: 20px;
-    min-height: 416px;
   }
   #additional-info
   {
