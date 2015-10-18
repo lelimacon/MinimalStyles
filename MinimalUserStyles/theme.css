@@ -3,6 +3,24 @@
 @-moz-document domain("userstyles.org")
 {
   /*
+   * General
+   */
+  a, a:hover
+  {
+    text-decoration: none;
+    color: #000;
+  }
+  a:visited, a:visited:hover
+  {
+    text-decoration: none;
+    color: #224;
+  }
+  a:hover
+  {
+    text-decoration: underline;
+  }
+
+  /*
    * Top banner
    */
   body
@@ -13,13 +31,17 @@
   }
   #main-header
   {
-    background-color: #f4f4f4;
-    padding: 16px 10px 16px 230px;
-    color: #444;
-    font-weight: none;
-    box-shadow: 0px 2px 2px #aaa;
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    width: 100%;
     margin: 0;
+    padding: 16px 10px 16px 230px;
     border-radius: 0;
+    background-color: #f4f4f4;
+    color: #444;
+    font-weight: unset;
+    box-shadow: 0px 2px 2px #aaa;
   }
   #main-header h1::after /* hides the dash */
   {
@@ -40,23 +62,37 @@
     border-right: 1px solid #DDD;
     text-decoration: none;
     background-color: #fff;
-    /* LOGO
-    color: transparent;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Stylish_SVG_Logo.svg/256px-Stylish_SVG_Logo.svg.png");
-    background-repeat : no-repeat;
-    background-position: center 6px;
-    background-size: 40px 40px;
-    */
-    /* TEXT
-    */
     color: #666;
   }
   #main-header h1 a:hover
   {
-    /* LOGO
-    color: transparent;
-    */
     color: #222;
+  }
+  @media (max-width: 900px)
+  {
+    #main-header
+    {
+      padding-left: 70px;
+    }
+    #main-header h1::after /* hides the dash */
+    {
+      left: 62px;
+    }
+    #main-header h1 a
+    {
+      width: 10px;
+      height: 32px;
+      color: transparent;
+      font-size: 0px;
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Stylish_SVG_Logo.svg/256px-Stylish_SVG_Logo.svg.png");
+      background-repeat : no-repeat;
+      background-position: center 14px;
+      background-size: 40px 40px;
+    }
+    #main-header h1 a:hover
+    {
+      color: transparent;
+    }
   }
 
   /*
@@ -64,9 +100,12 @@
    */
   #left-sidebar
   {
+    float: none !important;
     position: fixed;
+    z-index: 10;
     top: 65px;
     left: 0px;
+    margin: 0 !important;
     padding: 0px;
     width: 220px;
     height: 100%;
@@ -84,10 +123,10 @@
     border-radius: 0;
     background-color: transparent;
   }
-  #sidebar-search
+  #left-sidebar #sidebar-search
   {
-    margin-top: 16px;
-    margin-bottom: 36px !important;
+    margin-top: 6px;
+    margin-bottom: 26px;
   }
   #sidebar-search #search-terms
   {
@@ -112,7 +151,7 @@
     background-repeat : no-repeat;
     background-position: center center;
   }
-  #sidebar-search #search-submit:hover
+  #sidebar-search:hover #search-submit
   {
     -webkit-filter: invert(100%);
     filter: invert(100%);
@@ -121,21 +160,66 @@
   }
   #sidebar-search #show-advanced-search
   {
-    text-decoration: none !important;
+    text-decoration: none;
     margin-top: 2px;
     color: #222;
   }
   #left-sidebar nav li
   {
-    font-weight: bold;
-    margin-bottom: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-size: 26px 26px;
+    background-position: 0 center;
+    background-repeat: no-repeat;
   }
-  #left-sidebar li a
+  #left-sidebar nav li a
   {
-    color: #444;
     text-decoration: none;
-    padding-bottom: 6px;
-    padding-top: 6px;
+    padding-left: 40px;
+    font-weight: bold;
+    color: #444;
+  }
+  #left-sidebar nav li a:hover
+  {
+    color: #111;
+  }
+  #left-sidebar nav li a::before
+  {
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -6px;
+    width: 26px;
+    height: 26px;
+    background-color: #111;
+    content: "";
+  }
+  #left-sidebar #sidebar-browse a::before
+  {
+    background: url("https://rawgithub.com/lelimacon/MinimalStyles/master/MinimalUserStyles/icon-folder.svg");
+    background-size: 26px 26px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  #left-sidebar #sidebar-my-account a::before
+  {
+    background: url("https://rawgithub.com/lelimacon/MinimalStyles/master/MinimalUserStyles/icon-account.svg");
+    background-size: 26px 26px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  #left-sidebar #sidebar-help a::before
+  {
+    background: url("https://rawgithub.com/lelimacon/MinimalStyles/master/MinimalUserStyles/icon-help.svg");
+    background-size: 26px 26px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  #left-sidebar #sidebar-forum a::before
+  {
+    background: url("https://rawgithub.com/lelimacon/MinimalStyles/master/MinimalUserStyles/icon-forum.svg");
+    background-size: 26px 26px;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   #related
   {
@@ -162,21 +246,67 @@
     margin-top: 12px;
     border: none;
   }
+  div + footer
+  {
+    position: fixed;
+    z-index: 10;
+    width: 200px;
+    left: 0px;
+    bottom: 0px;
+  }
+  div + footer a
+  {
+    margin-left: 15px;
+    color: #222;
+    text-decoration: none;
+  }
   @media (max-width: 900px)
   {
     #left-sidebar
     {
-      float: none !important;
-      width: 220px !important;
-      margin: 0 !important;
+      width: 60px !important;
+    }
+    #left-sidebar #sidebar-search
+    {
+      margin-bottom: 50px;
     }
     #sidebar-search #search-terms
     {
-      width: 100% !important;
+      display: none;
+      float: none;
+      position: absolute;
+      width: 200px !important;
+      left: 14px;
+      height: 32px;
+      padding-left: 40px;
+    }
+    #sidebar-search:hover #search-terms
+    {
+      display: initial;
+    }
+    #sidebar-search #search-submit
+    {
+      left: 10px;
     }
     #sidebar-search #show-advanced-search
     {
-      text-align: right !important;
+      display: none;
+    }
+    #related
+    {
+      display: none;
+    }
+    #left-sidebar nav li a
+    {
+      margin-left: -160px;
+    }
+    #left-sidebar nav li a::before
+    {
+      margin-left: 120px;
+    }
+    div + footer
+    {
+      display: none;
     }
   }
   @media (max-height: 560px)
@@ -187,7 +317,8 @@
     }
     #left-sidebar nav li
     {
-      margin-bottom: 14px;
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
   }
   @media (max-height: 480px)
@@ -258,6 +389,8 @@
   #info-tables #style-author-info td
   {
     text-align: right;
+    overflow: hidden;
+    max-width: 0px;
   }
   #info-tables #style-install-info
   {
@@ -386,7 +519,6 @@
   }
   #main-article
   {
-    margin-left: 0;
     margin: 0 !important;
     padding: 20px;
     padding-top: 24px;
@@ -425,21 +557,11 @@
     background-color: #fff;
     font-family: Consolas, Verdana, sans-serif;
   }
-
-  /*
-   * Footer
-   */
-  div + footer
+  @media (max-width: 900px)
   {
-    position: fixed;
-    width: 200px;
-    left: 0px;
-    bottom: 0px;
-  }
-  div + footer a
-  {
-    margin-left: 15px;
-    color: #222;
-    text-decoration: none;
+    #content-wrapper
+    {
+      margin-left: 60px;
+    }
   }
 }
