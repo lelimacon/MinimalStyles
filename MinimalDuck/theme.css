@@ -117,4 +117,34 @@
 	{
 		background-color: #aaa;
 	}
+
+	/*
+	 * Search page header
+	 */
+	#header_wrapper
+	{
+		padding-bottom: 16px;
+    box-shadow: 0px 2px 2px #aaa;
+	}
+	#header_wrapper::before
+	{
+		visibility: hidden;
+	}
+	#header_wrapper::after
+	{
+		visibility: hidden;
+	}
+	#header_wrapper #header::after
+	{
+		visibility: hidden;
+	}
+	#header_wrapper .header__search-wrap
+	{
+		margin-bottom: 16px;
+	}
+	#header #duckbar a::after,
+	#header #duckbar a::before
+	{
+		visibility: hidden;
+	}
 }
