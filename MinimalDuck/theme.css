@@ -1,14 +1,14 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
 /*
- * Remove DDG propaganda
+ * Kill DDG propaganda
  */
 
 .tag-home--slide
 {
     display: none;
 }
-.header--aside
+.onboarding-ed
 {
     display: none;
 }
@@ -105,16 +105,31 @@
 
 
 /*
- * Hide menu logo
+ * Hide top right menu except when hover
  */
 
-.header__button--menu
+.header--aside .header__button--menu,
+.header--aside .header--aside__item
 {
-    color: #fff;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+   -moz-transition: opacity .2s ease-in-out;
+   -webkit-transition: opacity .2s ease-in-out;
 }
-.header__button--menu:hover
+.header--aside:hover .header__button--menu,
+.header--aside:hover .header--aside__item
 {
-    color: #aaa;
+    opacity: 1;
+}
+
+
+/*
+ * Menu
+ */
+
+.nav-menu, .nav-menu--slideout
+{
+    background-color: inherit;
 }
 
 
