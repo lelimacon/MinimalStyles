@@ -178,9 +178,10 @@ root
     float: left;
     width: 175px;
     padding: 12px;
-    margin-top: -16px;
+    margin-top: -11px;
     background: white;
     border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 #nav-view #navigation .navigation_link
@@ -198,6 +199,7 @@ root
 {
     margin: 0 20px;
     margin-left: 220px;
+    margin-top: 50px;
     padding: 12px 26px;
     background-color: white;
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
@@ -240,7 +242,7 @@ root
 #nav-view #style_info
 {
     margin: 0;
-    margin-top: 360px;
+    margin-top: 374px;
 }
 
 #nav-view #style_info:before
@@ -256,7 +258,7 @@ root
 #nav-view #preview_image_div
 {
     position: absolute;
-    top: 7px;
+    top: 57px;
     left: 200px;
     margin: 0;
     padding: 0;
